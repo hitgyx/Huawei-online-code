@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int simpleVersion(int a, int b)  
+{  
+    int tmpa = a, tmpb = b;  
+  
+    int c = a % b;  
+    while (c != 0)  
+    {  
+        a = b;  
+        b = c;  
+        c = a % b;  
+    }  
+    return b * (tmpa / b) * (tmpb / b);  
+}  
+int main(){
+    int a,b,num;
+    cin>>a>>b;
+	cout<<simpleVersion(a,b);
+    return 0;
+}
