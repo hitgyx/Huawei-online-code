@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void translate(string mm){
+    for(int i=0;i<mm.length();i++){
+        if(mm[i]>='A' && mm[i]<'Z')
+            mm[i]=mm[i]-'A'+'a'+1;
+        else if(mm[i]=='Z')
+            mm[i]='a';
+        else if(mm[i]>='a' && mm[i]<='c')
+            mm[i]='2';
+        else if(mm[i]>='d' && mm[i]<='f')
+            mm[i]='3';
+        else if(mm[i]>='g' && mm[i]<='i')
+            mm[i]='4';
+        else if(mm[i]>='j' && mm[i]<='l')
+            mm[i]='5';
+        else if(mm[i]>='m' && mm[i]<='o')
+            mm[i]='6';
+        else if(mm[i]>='p' && mm[i]<='s')
+            mm[i]='7';
+        else if(mm[i]>='t' && mm[i]<='v')
+            mm[i]='8';
+        else if(mm[i]>='w' && mm[i]<='z')
+            mm[i]='9';
+
+    }
+    cout<<mm<<endl;
+}
+
+int main(){
+    string mm;
+    while(cin>>mm)
+    {
+        translate(mm);
+    }
+    return 0;
+}
